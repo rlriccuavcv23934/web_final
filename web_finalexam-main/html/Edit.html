@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/xm.css">
+    <style>
+        /* 设置编辑器的顶部边距 */
+        #editor {
+            margin-top: 110px;
+        }
+
+        /* 设置保存博客按钮的样式 */
+        #otherPageButton {
+            position: fixed;
+            margin-top: 150px;
+            right: 60px;
+            padding: 10px 20px;
+            background-color: #8299ac;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #otherPageButton:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <!-- 引入编辑器的样式文件 -->
+    <title>博客编辑</title>
+    <link rel="stylesheet" href="editor.md/css/editormd.min.css">
+    <!-- 引入必要的 JavaScript 库文件 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- 引入编辑器的 Markdown 解析库 -->
+    <script src="editor.md/lib/marked.min.js"></script>
+    <!-- 引入编辑器的代码美化库 -->
+    <script src="editor.md/lib/prettify.min.js"></script>
+    <!-- 引入编辑器的核心文件 -->
+    <script src="editor.md/editormd.js"></script>
+</head>
+<body>
+<nav class="homenav">
+    <div class="navtitle"><strong>WooD</strong>|MY PROFILE</div>
+    <a href="home.html">主页</a>
+    <a href="about.html">关于</a>
+    <a href="blog.html">博客</a>
+    <a href="album.html">图库</a>
+    <a href="join.html">寻找</a>
+    <a href="project.html">项目</a>
+    <a href="game.html">游戏</a>
+    <a href="cartoon.html">动漫</a>
+    <a href="music.html">音乐</a>
+    <!--<a href="study.html">学习资源</a>-->
+    <div class="navanim blog"></div>
+    <div class="none"></div>
+</nav>
+<div class="container" data-state="day">
+    <div class="toggle--wrapper">
+        <div class="toggle--knob"></div>
+    </div>
+</div>
+<button id="otherPageButton">保存博客</button>
+<div id="editor"></div>
+<script>
+    // 创建编辑器实例
+    var editor = editormd("editor", {
+        // 这里的尺寸必须在这里设置，设置样式会被 editormd 自动覆盖
+        width: "1024px",
+        // 设置高度
+        height: "700px",
+        // 编辑器中初始内容
+        markdown: "# 在这里写下一篇博客",
+        //下拉150px
+        editorTheme: "pastel-on-dark",
+        // 指定插件路径
+        path: "editor.md/lib/"
+    });
+
+    console.clear();
+    // 获取页面元素
+    const elToggle = document.querySelector('.toggle--wrapper');
+    const elApp = document.querySelector('.container');
+
+    // 定义状态机
+    const machine = {
+        initial: elApp.dataset.state,//'day',
+        states: {
+            day: {
+                on: {
+                    TOGGLE: 'night'
+                }
+            },
+            night: {
+                on: {
+                    TOGGLE: 'day'
+                }
+            },
+        }
+    };
+
+    // 绑定点击事件到切换按钮
+    elToggle.addEventListener('click', (e) => {
+        const currentState = elApp.dataset.state;
+        const nextState = machine.states[currentState].on.TOGGLE;
+        toggleState(nextState);
+    });
+
+    // 切换状态的函数
+    const toggleState = (state) => {
+        elApp.dataset.state = state;
+
+        const navElement = document.querySelector('nav');
+        const otherPageButton = document.getElementById('otherPageButton');
+
+        if (state === 'night') {
+            // 切换到夜间模式
+            navElement.style.backgroundColor = 'rgb(30, 39, 46)';
+            otherPageButton.style.backgroundColor = 'rgb(30, 39, 46)';
+            navElement.style.color = 'rgb(234, 247, 255)';
+        } else {
+            // 切换到白天模式
+            navElement.style.backgroundColor = '#8299ac';
+            otherPageButton.style.backgroundColor = '#8299ac';
+            navElement.style.color = 'rgb(234, 247, 255)';
+        }
+
+        // 绑定保存按钮点击事件
+        const saveButton = document.getElementById('otherPageButton');
+        saveButton.addEventListener('click', function () {
+            const markdownContent = editor.getMarkdown();
+
+            // 创建 Blob 对象
+            const blob = new Blob([markdownContent], {type: 'text/plain'});
+
+            // 创建链接并设置保存文件的 URL
+            const url = URL.createObjectURL(blob);
+
+            // 创建一个临时的链接并模拟点击进行下载
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'markdown.md'; // 设置下载文件的文件名
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+
+            // 清理临时链接
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        });
+    }
+</script>
+</body>
+</html>

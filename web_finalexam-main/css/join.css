@@ -1,0 +1,224 @@
+@charset "utf-8";
+.mid {
+    width: 100vw; /* 将元素的宽度设置为视口宽度的 100% */
+    height: 100vh; /* 将元素的高度设置为视口高度的 100% */
+    display: flex; /* 将元素设置为弹性布局 */
+    justify-content: center; /* 将弹性子元素在主轴上水平居中对齐 */
+    align-items: center; /* 将弹性子元素在交叉轴上垂直居中对齐 */
+}
+
+.joinpart {
+    width: 1200px; /* 设置元素的宽度为 1200 像素 */
+    height: 650px; /* 设置元素的高度为 650 像素 */
+    margin: auto; /* 将元素水平居中对齐 */
+    display: flex; /* 将元素设置为弹性布局 */
+    justify-content: center; /* 水平居中对齐弹性子元素 */
+    background-image: url("../image/background.jpg"); /* 设置背景图像为 "join.jpg" */
+    background-repeat: no-repeat; /* 设置背景图像不重复平铺 */
+    background-size: 1300px; /* 设置背景图像的大小为 1300 像素 */
+    overflow: hidden; /* 超出元素尺寸的内容隐藏 */
+    opacity: 0.9; /* 设置元素的不透明度为 0.9 */
+    border-radius: 50px; /* 设置元素的边框圆角为 50 像素 */
+    animation: loadbac 1s linear; /* 应用名为 "loadbac" 的关键帧动画，持续时间为 1 秒，动画时间函数为线性 */
+    transition: 1s ease 0.2s; /* 设置过渡效果的属性和时长，过渡时间函数为 ease，延迟时间为 0.2 秒 */
+
+}
+
+.joinpart .left {
+    width: 400px;
+    height: 100%;
+}
+
+.joinpart .left .square {
+    width: 250px; /* 设置方块的宽度为 250px */
+    height: 250px; /* 设置方块的高度为 250px */
+    border: 5px solid whitesmoke; /* 设置边框样式为 5px 的实线边框，颜色为 RGB 值 (183, 207, 226) */
+    margin: auto; /* 自动计算并分配外边距，使方块在水平方向上居中对齐 */
+    margin-top: 200px; /* 设置顶部外边距为 200px */
+    margin-left: 73px;
+    border-radius: 25%; /* 设置边框的圆角半径为宽度和高度的 30% */
+    animation: a1 30s infinite linear; /* 应用名为 a1 的动画，持续时间为 3 秒，无限循环，线性过渡 */
+}
+
+.left .square::before { /*伪元素*/
+    content: "";
+    width: 250px;
+    height: 250px;
+    transform: rotate(30deg);
+    border: 5px solid whitesmoke;
+    border-radius: 30%;
+    position: absolute;
+    animation: a2 25s infinite linear;
+}
+
+/*
+content: "";：设置伪元素的内容为空。
+width: 250px;：设置伪元素的宽度为 250 像素。
+height: 250px;：设置伪元素的高度为 250 像素。
+transform: rotate(30deg);：应用旋转变换，使伪元素绕中心点顺时针旋转 30 度。
+border: 5px solid rgb(183, 207, 226);：设置伪元素的边框为 5 像素宽的实线边框，颜色为 RGB 值 (183, 207, 226)。
+border-radius: 40%;：设置伪元素的边框半径为宽度的 40%，使其呈现圆形效果。
+position: absolute;：将伪元素的定位方式设置为绝对定位，相对于其最近的具有定位的父级元素进行定位。
+animation: a2 25s infinite linear;：应用名为 a2 的动画效果，动画持续时间为 25 秒，无限循环播放，动画速度为线性变化。
+*/
+
+.left .square::after {
+    content: "";
+    width: 250px;
+    height: 250px;
+    transform: rotate(60deg);
+    border: 5px solid whitesmoke;
+    border-radius: 30%;
+    position: absolute;
+    animation: a2 60s infinite linear;
+}
+
+.left .tit {
+    position: absolute;
+    font-size: 2em;
+    margin-left: 129px;
+    margin-top: -170px;
+    color: black;
+    z-index: -10;
+    text-shadow: 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 30px whitesmoke, 0 0 40px whitesmoke, 0 0 70px whitesmoke, 0 0 80px whitesmoke, 0 0 100px whitesmoke, 0 0 150px whitesmoke;
+}
+
+.left .square:hover { /*鼠标划过动画时间*/
+    animation: a1 15s infinite linear;
+}
+
+.left .square:hover::before {
+    animation: a2 80s infinite linear;
+}
+
+.left .square:hover::after {
+    animation: a1 50s infinite linear;
+}
+
+.joinpart .right { /*右侧一大块*/
+    width: 800px;
+    height: 100%;
+}
+
+.joinpart .goal {
+    color: whitesmoke;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px black;
+/ 文字阴影效果，增加立体感 * /
+}
+
+.joinpart .goal h1 {
+    font-size: 4em;
+    font-weight: bolder;
+    line-height: 50px;
+}
+
+
+.joinpart .goal p {
+    word-wrap: break-word;
+    font-size: 1.2em;
+    color: whitesmoke;
+    text-shadow: 5px 5px 5px black;
+/ 文字阴影效果，增加立体感 * /
+}
+
+.meth {
+    width: 500px;
+    height: 100px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+/*width: 500px;：设置元素的宽度为 500 像素。
+height: 100px;：设置元素的高度为 100 像素。
+flex-direction: row;：设置元素的主轴方向为水平方向，子元素将水平排列。
+display: flex;：将元素的显示方式设置为弹性布局，使其成为一个弹性容器。
+justify-content: space-around;：指定弹性容器内子元素在主轴上的对齐方式为均匀分布，子元素之间的间距相等，首尾子元素与容器边界的间距为一半。
+margin-top: 50px;：设置元素的上外边距为 50 像素，用于调整元素在垂直方向上的位置。
+*/
+
+.meth .icon {
+    width: 30px; /* 设置图标的宽度 */
+    height: 30px; /* 设置图标的高度 */
+    background-size: cover; /* 背景图片自适应尺寸 */
+    border-radius: 8px; /* 设置图标的圆角边框 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    background-position: center; /* 背景图片居中显示 */
+    transition: 0.4s ease 0s; /* 设置过渡效果的时间和速度 */
+}
+
+.meth .icon:hover {
+    transform: scale(1.1); /* 鼠标悬停时图标放大 */
+    cursor: pointer; /* 鼠标悬停时显示指针样式 */
+}
+
+.meth .Gmail {
+    background-image: url("../image/gmail.jpg"); /* 设置微信图标的背景图片 */
+}
+
+.meth .qq {
+    background-image: url("../image/qq.png"); /* 设置QQ图标的背景图片 */
+    background-size: 25px; /* 设置QQ图标背景图片的尺寸 */
+}
+
+.meth .vx {
+    background-image: url("../image/wc.png"); /* 设置微信图标的背景图片 */
+}
+
+.meth .blog {
+    background-image: url("../image/blog.png"); /* 设置博客园图标的背景图片 */
+}
+
+.meth .GitHub {
+    background-image: url("../image/github.png"); /* 设置GitHub图标的背景图片 */
+    background-size: 40px; /* 设置GitHub图标背景图片的尺寸 */
+}
+
+.icon ul {
+    display: none; /* 初始状态下隐藏图标的下拉菜单 */
+    list-style: none; /* 去除下拉菜单的默认列表样式 */
+    margin-top: 30px; /* 设置下拉菜单的上边距 */
+    width: 150px; /* 设置下拉菜单的宽度 */
+    margin-left: -80px; /* 设置下拉菜单的左偏移量 */
+    color: white; /* 设置下拉菜单的文本颜色 */
+    font-size: 14px; /* 设置下拉菜单的字体大小 */
+}
+
+.icon:hover ul {
+    display: block; /* 鼠标悬停时显示图标的下拉菜单 */
+    position: absolute; /* 将下拉菜单设为绝对定位 */
+}
+
+
+@keyframes a1 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a2 {
+    to {
+        transform: rotate(-1800deg);
+    }
+}
+
+@keyframes loadbac {
+    0% {
+        opacity: 0;
+        margin-top: 130px;
+    }
+    50% {
+        opacity: 0.5;
+        margin-top: 95px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 80px;
+    }
+}
+

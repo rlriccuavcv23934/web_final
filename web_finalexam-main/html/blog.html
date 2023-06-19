@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="../css/nav.css">  <!-- 引入导航栏的CSS样式 -->
+    <link rel="stylesheet" href="../css/body.css">  <!-- 引入页面主体的CSS样式 -->
+    <link rel="stylesheet" href="../css/blog.css">  <!-- 引入博客部分的CSS样式 -->
+    <link rel="stylesheet" href="../css/xm.css">  <!-- 引入其他CSS样式 -->
+    <style>
+        #otherPageButton {
+            position: fixed;
+            top: 150px;
+            right: 80px;
+            padding: 10px 20px;
+            background-color: #8299ac;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="navtitle"><strong>WooD</strong>|MY PROFILE</div>  <!-- 导航栏标题 -->
+    <a href="home.html">主页</a>  <!-- 导航链接 -->
+    <a href="about.html">关于</a>
+    <a href="blog.html">博客</a>
+    <a href="album.html">图册</a>
+    <a href="join.html">寻找</a>
+    <a href="project.html">项目</a>
+    <a href="game.html">游戏</a>
+    <a href="cartoon.html">动漫</a>
+    <a href="music.html">音乐</a>
+    <div class="navanim blog"></div>
+    <div class="none"></div>
+</nav>
+<button id="otherPageButton">编辑博客</button>  <!-- 一个编辑博客的按钮 -->
+<div class="container" data-state="day">  <!-- 包含主题切换的容器 -->
+    <div class="toggle--wrapper">  <!-- 主题切换的开关部分 -->
+        <div class="toggle--knob"></div>
+    </div>
+</div>
+<div class="mid">
+    <div class="content">
+        <div class="con c1">
+            <div class="imghid">
+                <div class="img"></div>
+            </div>
+            <div class="txt">
+                <a href="https://www.cnblogs.com/WoOD-outPut/?page=3" target="_blank">
+                    <h2>Java学习经历汇总</h2>
+                    <p>&emsp;&emsp;在学习Java经历中遇到的困难和经验</p>
+                </a>
+            </div>
+        </div>
+        <div class="con c2">
+            <div class="imghid">
+                <div class="img"></div>
+            </div>
+            <div class="txt">
+                <a href="https://www.cnblogs.com/WoOD-outPut/?page=1" target="_blank">
+                    <h2>C#学习经历汇总</h2>
+                    <p>&emsp;&emsp;在学习C#经历中遇到的困难和经验</p>
+                </a>
+            </div>
+        </div>
+        <div class="con c3">
+            <div class="imghid">
+                <div class="img"></div>
+            </div>
+            <div class="txt">
+                <a href="https://www.cnblogs.com/WoOD-outPut/?page=2" target="_blank">
+                    <h2>Web学习经历汇总</h2>
+                    <p>&emsp;&emsp;在学习Web经历中遇到的困难和经验</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="pri">
+        <div class="prihead">
+            <a href="join.html" target="_blank">
+                <div class="tx"></div>
+            </a>  <!-- 个人资料头像 -->
+            <h2>WooD</h2>  <!-- 个人资料名称 -->
+            <p>生活不止学习</p>  <!-- 个人资料简介 -->
+        </div>
+        <div class="tag">
+            <h2>TAG</h2>  <!-- 标签标题 -->
+            <p>C&emsp;&emsp;绘画&emsp;C#&emsp; HTML&emsp;&emsp;CSS&emsp;&emsp;Java&emsp;&emsp;JavaScript&emsp;Go&emsp;魔方&emsp;Python
+                &emsp; &emsp;</p>  <!-- 标签内容 -->
+        </div>
+    </div>
+</div>
+<footer class="foot">
+    <p>@2023 | BY:WooD</p>  <!-- 版权信息 -->
+    <p>随意使用</p>  <!-- 页脚信息 -->
+    <p>欢迎参观</p>
+</footer>
+
+<script src="../js/ClickBlog.js"></script>  <!-- 引入JavaScript脚本 -->
+</body>
+</html>

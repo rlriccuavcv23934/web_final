@@ -1,0 +1,41 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../image/join.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(193, 193, 193, 0.8);
+}
+
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+.foot {
+    margin-top: 60px;
+    width: 100vw;
+    height: 100px;
+    float: left;
+    clear: both;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: rgba(204, 213, 241, 0.3);
+}
+
+.foot p {
+    line-height: 13px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px black;
+}

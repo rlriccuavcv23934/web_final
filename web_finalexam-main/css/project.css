@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+.mid {
+    height: 180vh; /* 容器高度 */
+    width: 100vw; /* 容器宽度 */
+    display: flex; /* 使用 Flex 布局 */
+    flex-direction: column; /* 垂直方向排列 */
+}
+
+.mid .main {
+    margin-top: 100px; /* 顶部边距 */
+    width: 1024px; /* 主体宽度 */
+    height: 2048px; /* 主体高度 */
+    display: flex; /* 使用 Flex 布局 */
+    flex-direction: column; /* 垂直方向排列 */
+    background-image: url("../image/background.jpg"); /* 背景图片 */
+    background-size: cover; /* 背景图片大小 */
+    background-position: -500px; /* 背景图片位置 */
+    border-radius: 55px; /* 边框圆角 */
+    opacity: 1; /* 不透明度 */
+    z-index: 1; /* 层级 */
+}
+
+.mid .main h1 {
+    font-size: 50px; /* 字体大小 */
+    font-family: "华文隶书", "SimSun", serif; /* 字体样式 */
+    color: black; /* 字体颜色 */
+    margin-left: 15px; /* 左侧边距 */
+    margin-top: 25px; /* 顶部边距 */
+    margin-bottom: 5px; /* 底部边距 */
+    transition: 0.5s ease 0s; /* 过渡效果 */
+}
+
+.mid .main .lang p {
+    font-size: 40px; /* 字体大小 */
+    font-family: "华文新魏", "SimSun", serif; /* 字体样式 */
+    margin-left: 5%; /* 左侧边距 */
+    color: black; /* 字体颜色 */
+    text-shadow: 1px 1px 1px #00d95a; /* 字体阴影 */
+}
+
+.mid .main .lang p span {
+    display: inline-block; /* 内联块元素 */
+    transition: 0.3s ease 0s; /* 过渡效果 */
+}
+
+.mid .main .lang p:hover span {
+    transform: scale(1.3) translateX(5px); /* 鼠标悬停时的缩放和位移效果 */
+}
+
+.mid .main a {
+    text-decoration: none; /* 取消下划线 */
+    color: black; /* 字体颜色 */
+    display: block; /* 块级元素 */
+}
+
+.mid .main .lang1 p {
+    font-size: 40px; /* 字体大小 */
+    font-family: "华文新魏", "SimSun", serif; /* 字体样式 */
+    margin-left: 180px; /* 左侧边距 */
+    margin-top: -82px; /* 顶部边距 */
+    color: black; /* 字体颜色 */
+}
+
+.mid .main .lang1 p span {
+    display: inline-block; /* 内联块元素 */
+    transition: 0.3s ease 0s; /* 过渡效果 */
+}
+
+.mid .main .lang1 p:hover span {
+    transform: scale(1.3) translateX(5px); /* 鼠标悬停时的缩放和位移效果 */
+}
+
+.mid .main .lang2 p {
+    font-size: 40px; /* 字体大小 */
+    font-family: "华文新魏", "SimSun", serif; /* 字体样式 */
+    margin-left: 355px; /* 左侧边距 */
+    margin-top: -82px; /* 顶部边距 */
+    color: black; /* 字体颜色 */
+}
+
+.mid .main .lang2 p span {
+    display: inline-block; /* 内联块元素 */
+    transition: 0.3s ease 0s; /* 过渡效果 */
+}
+
+.mid .main .lang2 p:hover span {
+    transform: scale(1.3) translateX(5px); /* 鼠标悬停时的缩放和位移效果 */
+}
+
+.mid .main .lang3 p {
+    font-size: 40px; /* 字体大小 */
+    font-family: "华文新魏", "SimSun", serif; /* 字体样式 */
+    margin-left: 455px; /* 左侧边距 */
+    margin-top: -82px; /* 顶部边距 */
+    color: black; /* 字体颜色 */
+}
+
+.mid .main .lang3 p span {
+    display: inline-block; /* 内联块元素 */
+    transition: 0.3s ease 0s; /* 过渡效果 */
+}
+
+.mid .main .lang3 p:hover span {
+    transform: scale(1.3) translateX(5px); /* 鼠标悬停时的缩放和位移效果 */
+}
+
+.mid .main .main-mid {
+    height: 180px; /* 高度 */
+    border-radius: 55px; /* 边框圆角 */
+    width: 100%; /* 宽度 */
+    margin-top: 20px; /* 顶部边距 */
+    display: flex; /* 使用 Flex 布局 */
+    background: whitesmoke; /* 背景颜色 */
+}
+
+.mid .main .top-side {
+    flex-grow: 1; /* 占据剩余空间 */
+}
+
+
+.mid .main .down-side {
+    flex-grow: 1; /* 占据剩余空间 */
+    display: flex; /* 使用 Flex 布局 */
+    flex-direction: column; /* 垂直方向排列 */
+    border-radius: 60px; /* 边框圆角 */
+    margin-top: 5px; /* 顶部边距 */
+    height: 800px; /* 高度 */
+    width: 100%; /* 宽度 */
+    z-index: 9999; /* 层级 */
+}
+
+.mid .ab {
+    width: 700px; /* 宽度 */
+    height: 200px; /* 高度 */
+    background: rgba(253, 250, 260, 0.8); /* 背景颜色 */
+    box-shadow: 0 0 15px rgb(222, 222, 295); /* 盒子阴影 */
+    border-radius: 45px; /* 边框圆角 */
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: center; /* 水平居中 */
+    overflow: hidden; /* 溢出内容隐藏 */
+    margin-top: 35px; /* 顶部边距 */
+    margin-left: 180px; /* 左侧边距 */
+    z-index: 9999; /* 层级 */
+}
+
+.a1 .img {
+    background-image: url("../image/pics04.jpg"); /* 背景图片 */
+}
+
+.a2 .img {
+    background-image: url("../image/head(2).jpg"); /* 背景图片 */
+}
+
+.ab p {
+    word-wrap: break-word; /* 单词换行 */
+    font-family: "Times New Roman", "SimSun", serif;; /* 字体样式 */
+    color: black; /* 字体颜色 */
+    line-height: 25px; /* 行高 */
+    font-size: 17px; /* 字体大小 */
+    text-shadow: 2px 2px 2px whitesmoke; /* 字体阴影 */
+    transition: all 0.3s ease 0s; /* 过渡效果 */
+}
+
+.ab p:hover {
+    transform: scale(1.125); /* 鼠标悬停时的缩放效果 */
+}
+
+.ab a {
+    text-decoration: none; /* 取消下划线 */
+}
+
+.ab .txt {
+    width: 400px; /* 宽度 */
+    margin: 0 50px 0 50px; /* 边距 */
+}
+
+.ab h2 {
+    text-align: center; /* 文本居中 */
+    font-size: 30px; /* 字体大小 */
+    margin-top: 10px; /* 顶部边距 */
+    color: #7facc9; /* 字体颜色 */
+    font-family: "微软雅黑 Light", "SimSun", serif;; /* 字体样式 */
+    text-shadow: 1px 1px 1px black; /* 字体阴影 */
+    transition: all 0.3s ease 0s; /* 过渡效果 */
+}
+
+.ab h2:hover {
+    transform: scale(1.125); /* 鼠标悬停时的缩放效果 */
+}
+
+.ab .img {
+    width: 300px; /* 宽度 */
+    height: 100%; /* 高度 */
+    background-size: cover; /* 背景图片大小 */
+    background-position: center; /* 背景图片位置 */
+    filter: grayscale(0.3); /* 图片灰度 */
+    opacity: 0.8; /* 不透明度 */
+    transition: all 0.3s ease 0s; /* 过渡效果 */
+}
+
+.a1 .img:hover {
+    transform: scale(1.1); /* 鼠标悬停时的缩放效果 */
+    background-image: url("../image/jabook.png"); /* 背景图片 */
+}
+
+.a2 .img:hover {
+    transform: scale(1.1); /* 鼠标悬停时的缩放效果 */
+    background-image: url("../image/jastu.png"); /* 背景图片 */
+}

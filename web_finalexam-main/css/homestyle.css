@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+.titleimg {
+    background-image: url("../image/pics05.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 1540px;
+    background-attachment: fixed;
+    width: 100vw;
+    transition: 0.5s ease 0s;
+    animation: load 0.5s;
+}
+
+.titleimg .title {
+    width: 1540px;
+    padding: 200px;
+    font-size: 100px;
+    font-weight: bolder;
+    color: rgba(7, 239, 225, 0.8);
+}
+
+.main {
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.sec {
+    height: 85vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+}
+
+/*height: 100vh;：设置元素的高度为视口高度（viewport height），即占据整个可视区域的高度。
+
+width: 100vw;：设置元素的宽度为视口宽度（viewport width），即占据整个可视区域的宽度。
+
+scroll-snap-align: start;：指定元素在滚动时的对齐方式。start 值表示元素会与滚动容器的起始边缘对齐，即滚动到该元素时会自动停止滚动，使其完全显示在视口内。*/
+.pt0 {
+    transform: translateY(80px); /* 将遮罩往下拉 80 像素 */
+    width: 1100px; /* 设置元素的宽度为 1200 像素 */
+    height: 550px; /* 设置元素的高度为 650 像素 */
+    margin: auto; /* 将元素水平居中对齐 */
+    display: flex; /* 将元素设置为弹性布局 */
+    justify-content: center; /* 水平居中对齐弹性子元素 */
+    background-image: url("../image/background.jpg"); /* 设置背景图像为 "join.jpg" */
+    background-repeat: no-repeat; /* 设置背景图像不重复平铺 */
+    background-size: 1300px; /* 设置背景图像的大小为 1300 像素 */
+    overflow: hidden; /* 超出元素尺寸的内容隐藏 */
+    opacity: 0.9; /* 设置元素的不透明度为 0.9 */
+    border-radius: 50px; /* 设置元素的边框圆角为 50 像素 */
+    /*animation: loadbac 1s linear;           /* 应用名为 "loadbac" 的关键帧动画，持续时间为 1 秒，动画时间函数为线性 */
+    /*transition: 1s ease 0.2s;*/
+    transition: transform 0.5s ease; /* 添加过渡效果，使放大过程更平滑 */
+    box-shadow: 0 0 15px rgb(222, 222, 295);
+}
+
+.pt0:hover {
+    cursor: auto;
+    transform: scale(1.01) translateY(95px);
+}
+
+
+.pt0 .left {
+    width: 300px;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+.pt0 .right { /*右侧一大块*/
+    width: 800px;
+    height: 100%;
+}
+
+.pt0 .left .Icon {
+    display: flex;
+    width: 350px; /* 设置方块的宽度为 250px */
+    height: 350px; /* 设置方块的高度为 250px */
+    border: 0; /* 设置边框样式为 5px 的实线边框，颜色为 RGB 值 (183, 207, 226) */
+    /*margin: auto;*/ /* 自动计算并分配外边距，使方块在水平方向上居中对齐 */
+    margin-top: 70px; /* 设置顶部外边距为 200px */
+    margin-left: 40px; /* 设置顶部外边距为 200px */
+    border-radius: 50%;
+    background-image: url("../image/Icon.jpg"); /* 设置边框的圆角半径为宽度和高度的 30% */ /* 应用名为 a1 的动画，持续时间为 3 秒，无限循环，线性过渡 */
+    background-size: cover; /*将背景图片按比例缩放*/
+
+}
+
+.left:hover {
+    cursor: pointer;
+    transform: scale(1.105);
+    transition: 0.5s ease 0s; /* 添加过渡效果，使放大过程更平滑 */
+}
+
+.pt:not(:hover) {
+    transform: scale(1);
+}
+
+.pt0 .right .goal {
+    color: whitesmoke;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pt0 .right .goal h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center; /* 将字体居中对齐 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    text-shadow: 2px 2px 5px black;
+/ 文字阴影效果，增加立体感 * /
+}
+
+.pt0 .right .goal h2 {
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: left; /* 将字体居中对齐 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    text-shadow: 2px 2px 5px black;
+/ 文字阴影效果，增加立体感 * /
+}
+
+.pt0 .right .goal h3 {
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: left; /* 将字体居中对齐 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    margin-left: -52px; /* 往左拉20像素 */
+    text-shadow: 2px 2px 5px black;
+/ 文字阴影效果，增加立体感 * /
+}
+
+.pt0 .right .goal p {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center; /* 将字体居中对齐 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    margin-left: -45.5px; /* 往左拉20像素 */
+    text-shadow: 2px 2px 4px black;
+/ 文字阴影效果，增加立体感 * /
+}
+
+
+.pt {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 250px;
+    float: left;
+    margin: 100px 15px 15px 77px;
+    background: #8299ac;
+    opacity: 0.95;
+    box-shadow: 0 0 15px rgb(222, 222, 295);
+    border-radius: 20px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: all 0.5s ease 0s;
+}
+
+.pt:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.txt p {
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+
+.imghid {
+    overflow: hidden;
+}
+
+.part1 .img {
+    background-image: url("../image/head.jpg");
+
+}
+
+.part2 .img {
+    background-image: url("../image/blog.jpg");
+
+}
+
+.part3 .img {
+    background-image: url("../image/ablu.jpg");
+
+}
+
+.part4 .img {
+    background-image: url("../image/find.jpg");
+}
+
+.part5 .img {
+    background-image: url("../image/game.jpg");
+}
+
+.part6 .img {
+    background-image: url("../image/project.jpg");
+}
+
+.part7 .img {
+    background-image: url("../image/music.jpg");
+}
+
+.part8 .img {
+    background-image: url("../image/about.jpg");
+}
+
+.pt .img {
+    height: 200px;
+    width: 250px;
+    background-size: cover;
+    background-position: 0px -50px;
+    transition: all 0.5s ease 0s;
+    opacity: 0.8;
+}
+
+.pt .img:hover {
+    transform: scale(1.1);
+}
+
+.pt .txt {
+    height: 310px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+
+.pt .txt h1 {
+    text-align: center;
+    font-size: 3em;
+    color: whitesmoke;
+    height: 30px;
+    line-height: 30px;
+}
+
+/*注册按钮*/
+.register {
+    font-size: 18px;
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    top: 100px;
+    left: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(86, 116, 156, 0.8);
+    font-family: "幼圆", Arial, Helvetica, sans-serif;
+    color: rgb(180, 216, 233);
+
+}
+
+.register:hover {
+    z-index: 9999;
+    transform: scale(1.2);
+    transition: 0.5s ease 0s;
+    background-color: rgba(118, 155, 202, 0.8);
+    box-shadow: 2px 2px 10px rgba(118, 155, 202, 0.8);
+}
+
+/**/
+
+
+.pt .txt p {
+    margin-top: -15px;
+    word-wrap: break-word;
+    color: whitesmoke;
+}
+
+@keyframes load {
+    0% {
+        background-position-y: 50px;
+        opacity: 0;
+    }
+    100% {
+        background-position-y: 0px;
+        opacity: 1;
+    }
+}

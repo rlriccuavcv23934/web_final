@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- HTML文档类型声明 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 设置浏览器兼容性 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置视口 -->
+    <title>登录</title> <!-- 设置页面标题 -->
+    <link rel="stylesheet" href="../css/login.css"> <!-- 导入名为login.css的样式表 -->
+    <link rel="stylesheet" href="../css/Loading.css"> <!-- 导入名为Loading.css的样式表 -->
+</head>
+<body>
+<div class="back" id="back"> <!-- 具有类名为back和id为back的div元素 -->
+    <div class="log" id="log"> <!-- 具有类名为log和id为log的div元素 -->
+        <div class="logtitle">LOGIN</div>
+        <p></p> <!-- 具有类名为logtitle的div元素 -->
+        <form action="home.html" id="logbody" class="logbody" onsubmit="return login()">
+            <!-- 具有id为logbody和类名为logbody的form元素 -->
+            <input type="text" id="zh" size="20" class="txt" placeholder="账户"> <!-- 具有id为zh、类名为txt和占位符为"账户"的文本输入框 -->
+            <br>
+            <input type="password" id="mm" size="20" class="txt" placeholder="密码">
+            <!-- 具有id为mm、类名为txt和占位符为"密码"的密码输入框 -->
+            <br>
+            <input type="text" id="verification" size="20" class="txt" placeholder="验证码">
+            <!-- 具有id为verification、类名为txt和占位符为"验证码"的文本输入框 -->
+            <span id="verificationCode"></span> <!-- 具有id为verificationCode的span元素 -->
+            <br>
+
+            <input type="submit" value="登录" id="sub" class="sub"> <!-- 具有id为sub和类名为sub的提交按钮 -->
+            <input type="button" value="注册" id="sub_1" class="register" onclick="register()">
+            <!-- 具有id为sub_1和类名为register的按钮，点击时调用register()函数 -->
+
+            <a href="home.html"><input type="button" value="游客登录" id="ykbt" class="ykbt"></a>
+            <!-- 具有id为ykbt和类名为ykbt的按钮，点击时跳转到home.html页面 -->
+        </form>
+    </div>
+</div>
+<div class="con" id="con"> <!-- 具有类名为con和id为con的div元素 -->
+    <div class="load"> <!-- 具有类名为load的div元素 -->
+        <div class="dot" style="--i:0"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为0 -->
+        <div class="dot" style="--i:1"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为1 -->
+        <div class="dot" style="--i:2"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为2 -->
+        <div class="dot" style="--i:3"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为3 -->
+        <div class="dot" style="--i:4"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为4 -->
+        <div class="dot" style="--i:5"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为5 -->
+        <div class="dot" style="--i:6"></div> <!-- 具有类名为dot的div元素，样式中使用了变量--i的值为6 -->
+    </div>
+</div>
+<script src="../js/login.js"></script> <!-- 导入名为login.js的JavaScript脚本 -->
+</body>
+</html>

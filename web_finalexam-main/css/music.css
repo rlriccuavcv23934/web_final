@@ -1,0 +1,275 @@
+@charset "utf-8";
+.mid {
+    height: 220vh;
+    width: 100vw;
+    display: flex;
+
+}
+
+#audioPlayer1 {
+    transform: scale(1.3);
+    transition: 0.5s ease 0s;
+    border-radius: 60px;
+    border: 1px solid #1e1f22;
+}
+
+#audioPlayer1:hover {
+    transform: scale(1.6)
+}
+
+#audioPlayer2 {
+    transform: scale(1.3);
+    transition: 0.5s ease 0s;
+    border-radius: 60px;
+    border: 1px solid #1e1f22;
+}
+
+#audioPlayer2:hover {
+    transform: scale(1.6)
+}
+
+#audioPlayer3 {
+    transform: scale(1.3);
+    transition: 0.5s ease 0s;
+    border-radius: 60px;
+    border: 1px solid #1e1f22;
+}
+
+#audioPlayer3:hover {
+    transform: scale(1.6);
+}
+
+#audioPlayer4 {
+    transform: scale(1.3);
+    transition: 0.5s ease 0s;
+    border-radius: 60px;
+    border: 1px solid #1e1f22;
+}
+
+#audioPlayer4:hover {
+    transform: scale(1.6);
+}
+
+#audioPlayer5 {
+    transform: scale(1.3);
+    transition: 0.5s ease 0s;
+    border-radius: 60px;
+    border: 1px solid #1e1f22;
+}
+
+#audioPlayer5:hover {
+    transform: scale(1.6);
+}
+
+.music-player {
+    display: flex;
+    width: 800px;
+    height: 200px;
+    align-items: center;
+    background-color: #f1f1f1;
+    box-shadow: 4px 4px 4px #33FFFF;
+    opacity: 0.9;
+    padding: 20px;
+    margin-top: 100px;
+    backdrop-filter: blur(0.2);
+    float: right;
+    clear: right;
+    border-radius: 55px;
+    margin-left: 200px;
+    overflow: hidden;
+
+}
+
+.container {
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.container1 {
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 480px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.container2 {
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 800px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.container3 {
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1120px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.container4 {
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1440px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+
+.music-details {
+    margin-top: -10px;
+    margin-right: 10px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+
+.music-image {
+    flex: 1;
+}
+
+.music-details h1 {
+    font-weight: bold;
+    color: black;
+    font-family: "华文隶书", "SimSun", serif;
+    font-size: 50px;
+    transition: 0.5s ease 0s;
+}
+
+.music-details a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.music-details h1:hover {
+    transform: scale(1.2);
+}
+
+.music-details p {
+    font-weight: bold;
+    font-family: "华文新魏", "SimSun", serif;
+    font-size: 35px;
+    transition: 0.5s ease 0s;
+}
+
+.music-details p:hover {
+    transform: scale(1.2) translateX(15px);
+    font-weight: bold;
+}
+
+.c1 .img {
+    background-image: url("../image/windy.jpg");
+    background-position: -150px;
+    margin-left: 100px;
+    overflow: hidden;
+    height: 350px;
+    width: 450px;
+    background-size: cover;
+    opacity: 1;
+    transition: 0.3s ease 0s;
+    /* 添加其他图片样式 */
+}
+
+.c2 .img {
+    background-image: url("../image/formis.jpg");
+    background-position: -150px;
+    margin-left: 100px;
+    overflow: hidden;
+    height: 350px;
+    width: 450px;
+    background-size: cover;
+    opacity: 1;
+    transition: 0.3s ease 0s;
+}
+
+.c3 .img {
+    background-image: url("../image/overdose.jpg");
+    background-position: -150px;
+    margin-left: 100px;
+    overflow: hidden;
+    height: 350px;
+    width: 450px;
+    background-size: cover;
+    opacity: 1;
+    transition: 0.3s ease 0s;
+}
+
+.c4 .img {
+    background-image: url("../image/bad.jpg");
+    background-position: -90px;
+    margin-left: 100px;
+    overflow: hidden;
+    height: 350px;
+    width: 450px;
+    background-size: cover;
+    opacity: 1;
+    transition: 0.3s ease 0s;
+}
+
+.c5 .img {
+    background-image: url("../image/che.jpg");
+    background-position: -50px;
+    margin-left: 100px;
+    overflow: hidden;
+    height: 350px;
+    width: 450px;
+    background-size: cover;
+    opacity: 1;
+    transition: 0.3s ease 0s;
+}
+
+.c5 .img:hover {
+    background-image: url("../image/chehover.jpg");
+    background-size: cover;
+    transform: scale(0.8);;
+}
+
+.c3 .img:hover {
+    transform: scale(1.2);
+    background-image: url("../image/overdosehover.jpg");
+    background-size: cover;
+    background-position: 360px -160px;
+}
+
+.c4 .img:hover {
+    transform: scale(0.9);
+    background-image: url("../image/badhover.jpg");
+    background-size: cover;
+    background-position: -110px;
+}
+
+.c1 .img:hover {
+    transform: scale(1.2);
+    background-image: url("../image/windyhover.jpg");
+    background-size: cover;
+    background-position: -260px;
+}
+
+.c2 .img:hover {
+    transform: scale(1.2);
+    background-image: url("../image/formishover.jpg");
+    background-size: cover;
+    background-position: 370px;
+}
+

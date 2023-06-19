@@ -1,0 +1,152 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    color: rgb(28, 175, 185);
+    overflow: hidden;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/pics04.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: scale(1.05);
+}
+
+.back::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    position: fixed;
+}
+
+.back:hover::before {
+    backdrop-filter: none;
+}
+
+.log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 500px;
+    min-height: 300px;
+    background-color: rgba(20, 59, 76, 0.8);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(28, 175, 185);
+    backdrop-filter: blur(5px);
+}
+
+
+.logtitle {
+    font-size: 40px;
+    font-weight: bolder;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, rgba(235, 244, 252, 0.6), rgba(241, 220, 249, 0.6), rgba(255, 226, 226, 0.6), rgba(252, 250, 202, 0.6), rgba(213, 243, 194, 0.6), rgba(235, 244, 252, 0.6));
+    background-size: 800%;
+    animation: gradient 30s infinite linear;
+    color: transparent;
+    line-height: 100px;
+}
+
+.logtitle:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease 0s;
+}
+
+.logtitle:not(hover) {
+    transform: scale(1);
+    transition: 0.5s ease 0s;
+}
+
+.logbody .txt {
+    border: none;
+    border-bottom: 1px solid rgba(137, 160, 245, 0.7);
+    background: transparent;
+    transition: 0.3s;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.logbody .txt:hover {
+    transform: scaleX(1.1);
+}
+
+.logbody .txt:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(28, 175, 185, 0.8);
+    color: rgba(137, 160, 245, 0.7);
+}
+
+.logbody .sub {
+    width: 80%;
+    height: 45px;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(86, 116, 156, 0.8);
+    font-size: 16px;
+    font-family: "幼圆", Arial, Helvetica, sans-serif;
+    color: rgb(180, 216, 233);
+}
+
+.logbody .register {
+    width: 80%;
+    height: 45px;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(86, 116, 156, 0.8);
+    font-size: 16px;
+    font-family: "幼圆", Arial, Helvetica, sans-serif;
+    color: rgb(180, 216, 233);
+}
+
+.logbody .sub:hover {
+    background-color: rgba(118, 155, 202, 0.8);
+    box-shadow: 2px 2px 10px rgba(118, 155, 202, 0.8);
+}
+
+.logbody .register:hover {
+    background-color: rgba(118, 155, 202, 0.8);
+    box-shadow: 2px 2px 10px rgba(118, 155, 202, 0.8);
+}
+
+.ykbt {
+    margin-top: 20px;
+    margin-left: 70%;
+    border: none;
+    background-color: transparent;
+    color: rgba(198, 201, 248, 0.6);
+/ / 字体居中 display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.ykbt:hover {
+    color: rgb(64, 160, 216);
+    transform: scale(1.1);
+    transition: 0.5s ease 0s;
+}
+
+.ykbt:not(hover) {
+    transform: scale(1);
+    transition: 0.5s ease 0s;
+}
+
+@keyframes gradient {
+    100% {
+        background-position: -800% 0;
+    }
+}

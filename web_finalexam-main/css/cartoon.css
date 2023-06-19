@@ -1,0 +1,54 @@
+.sec {
+    height: 85vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+}
+
+/*height: 100vh;：设置元素的高度为视口高度（viewport height），即占据整个可视区域的高度。
+
+width: 100vw;：设置元素的宽度为视口宽度（viewport width），即占据整个可视区域的宽度。
+
+scroll-snap-align: start;：指定元素在滚动时的对齐方式。start 值表示元素会与滚动容器的起始边缘对齐，即滚动到该元素时会自动停止滚动，使其完全显示在视口内。*/
+.pt0 {
+    transform: translateY(80px); /* 将遮罩往下拉 80 像素 */
+    width: 1100px; /* 设置元素的宽度为 1200 像素 */
+    height: 550px; /* 设置元素的高度为 650 像素 */
+    margin: auto; /* 将元素水平居中对齐 */
+    display: flex; /* 将元素设置为弹性布局 */
+    justify-content: center; /* 水平居中对齐弹性子元素 */
+    background-image: url("../image/background.jpg"); /* 设置背景图像为 "join.jpg" */
+    background-repeat: no-repeat; /* 设置背景图像不重复平铺 */
+    background-size: 1300px; /* 设置背景图像的大小为 1300 像素 */
+    overflow: hidden; /* 超出元素尺寸的内容隐藏 */
+    opacity: 0.9; /* 设置元素的不透明度为 0.9 */
+    border-radius: 50px; /* 设置元素的边框圆角为 50 像素 */
+    /*animation: loadbac 1s linear;           /* 应用名为 "loadbac" 的关键帧动画，持续时间为 1 秒，动画时间函数为线性 */
+    /*transition: 1s ease 0.2s;*/
+    transition: transform 0.5s ease; /* 添加过渡效果，使放大过程更平滑 */
+    box-shadow: 0 0 15px rgb(222, 222, 295);
+    z-index: -1;
+}
+
+.pt0 .goal h1 {
+    font-size: 50px;
+    color: whitesmoke;
+    font-weight: bolder;
+    text-align: center; /* 将字体居中对齐 */
+    vertical-align: middle; /* 垂直居中对齐 */
+    text-shadow: 2px 3px 5px black;
+/ 文字阴影效果，增加立体感 * / z-index: 9999;
+}
+
+.pt0 .goal h1:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease 0s;
+}
+
+.pt0 .goal h1:not(hover) {
+    transform: scale(1);
+    transition: 0.5s ease 0s;
+}
+
+
+

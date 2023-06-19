@@ -1,0 +1,243 @@
+@charset "utf-8"; /* 设置字符集为UTF-8 */
+
+.mid {
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    padding-top: 65px; /* 设置顶部内边距 */
+    padding-left: 20%; /* 设置左侧内边距 */
+    display: flex;
+    flex-direction: column;
+}
+
+.con {
+    display: flex;
+    width: 650px;
+    height: 200px;
+    background: rgba(223, 230, 233, 0.8); /* 设置背景颜色和透明度 */
+    box-shadow: 2px 0 8px #33FFFF; /* 设置阴影效果 */
+    backdrop-filter: blur(0.2); /* 设置背景模糊 */
+    float: right; /* 设置元素向右浮动 */
+    clear: right; /* 清除右浮动 */
+    margin-top: 30px; /* 设置上方外边距 */
+    border-radius: 15px; /* 设置边框圆角 */
+    margin-left: 200px; /* 设置左侧外边距 */
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+.c1 {
+    animation: c1load 1s linear; /* 添加动画效果 */
+}
+
+.c2 {
+    animation: c2load 1.8s linear;
+}
+
+.c3 {
+    animation: c3load 2.7s linear;
+}
+
+.c1 .img {
+    background-image: url("../image/pics03.jpg"); /* 设置背景图片 */
+}
+
+.c1 .img:hover {
+    background-image: url("../image/Java.png"); /* 鼠标悬停时更改背景图片 */
+}
+
+.c2 .img {
+    background-image: url("../image/pics02.jpg");
+}
+
+.c2 .img:hover {
+    background-image: url("../image/csharp.png");
+}
+
+.c3 .img {
+    background-image: url("../image/pics04.jpg");
+}
+
+.c3 .img:hover {
+    background-image: url("../image/Web.png");
+}
+
+.c4 .img {
+    background-image: url("../image/pics04.jpg");
+}
+
+.c4 .img:hover {
+    background-image: url("../image/Web.png");
+}
+
+.imghid {
+    overflow: hidden;
+    width: 350px;
+}
+
+.con .img {
+    width: 250px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    transition: 0.5s ease 0s; /* 添加过渡效果 */
+}
+
+.con .img:hover {
+    transform: scale(1.1); /* 鼠标悬停时缩放 */
+}
+
+.con .txt {
+    width: 400px;
+    font-size: 22px;
+    padding: 0 40px;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 4px #8299ac; /* 设置文字阴影 */
+}
+
+.con .txt a {
+    text-decoration: none; /* 去除链接的下划线 */
+}
+
+.con .txt p {
+    color: #33FFFF;
+    font-size: 21px;
+    font-family: "微软雅黑 Light", serif;
+    text-shadow: 1px 1px 2px #d1d8e0;
+}
+
+
+.con .txt h2 {
+    color: #d1d8e0;
+    text-shadow: 3px 1px 2px rgb(28, 175, 185);
+}
+
+.pri {
+    height: 500px;
+    width: 300px;
+    float: left;
+    clear: left;
+    position: fixed;
+    margin-top: -650px;
+    margin-left: 100px;
+    animation: priload 3s linear; /* 添加动画效果 */
+}
+
+.pri .prihead {
+    height: 250px;
+    background-color: rgb(229, 239, 243);
+    border-radius: 20%;
+    padding-top: 50px;
+    box-shadow: 0 0 15px rgb(28, 175, 185);
+}
+
+.prihead a {
+    display: block;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 90px;
+    margin: auto;
+    border: 3px groove rgb(5, 82, 121);
+}
+
+.pri .prihead .tx {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-image: url("../image/icon.jpg");
+    background-size: cover;
+    transition: 0.5s ease 0s; /* 添加过渡效果 */
+}
+
+.prihead .tx:hover {
+    transform: scale(1.2); /* 鼠标悬停时缩放 */
+}
+
+.prihead h2 {
+    color: rgb(32, 76, 97);
+    text-align: center;
+}
+
+.prihead p {
+    color: rgb(28, 175, 185);
+    text-align: center;
+}
+
+.pri .tag {
+    height: 180px;
+    background-color: rgb(229, 239, 243);
+    margin-top: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 8px rgb(28, 175, 185);
+}
+
+.tag h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(56, 117, 158);
+    font-weight: bolder;
+}
+
+.tag p {
+    word-wrap: break-word;
+    display: block;
+    width: 220px;
+    padding-left: 40px;
+    color: rgb(28, 175, 185);
+}
+
+
+@keyframes c1load {
+    0% {
+        opacity: 0; /* 设置透明度 */
+    }
+    70% {
+        opacity: 0;
+        margin-top: 100px; /* 设置上方外边距 */
+    }
+    100% {
+        opacity: 1;
+        margin-top: 40px;
+    }
+}
+
+@keyframes c2load {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes c3load {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes priload {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

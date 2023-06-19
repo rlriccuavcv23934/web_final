@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* 具有类名为con的元素样式 */
+.con {
+    margin-top: -100vh; /* 设置顶部外边距为视窗高度的负值 */
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    width: 100%; /* 宽度占满父元素 */
+    height: 100%; /* 高度占满父元素 */
+    backdrop-filter: blur(10px); /* 背景模糊效果 */
+    display: none; /* 初始状态下隐藏 */
+}
+
+/* 具有类名为load的元素样式 */
+.load {
+    position: relative; /* 相对定位 */
+    display: flex; /* 使用弹性盒模型布局 */
+}
+
+/* 类名为load的元素内具有类名为dot的元素样式 */
+.load .dot {
+    position: relative; /* 相对定位 */
+    width: 20px; /* 宽度为20像素 */
+    height: 20px; /* 高度为20像素 */
+    background-attachment: fixed; /* 固定背景位置 */
+    background: rgb(120, 214, 214); /* 背景颜色为RGB(120, 214, 214) */
+    margin: 20px 0 0 20px; /* 外边距设置 */
+    border-radius: 50%; /* 边框圆角半径为50% */
+    animation: dotanim 1s infinite linear; /* 应用名为dotanim的动画效果，持续时间为1秒，无限循环，线性过渡 */
+    animation-delay: calc(0.1s * var(--i)); /* 设置动画延迟时间，根据索引变量--i计算 */
+}
+
+/* 名为dotanim的动画关键帧 */
+@keyframes dotanim {
+    0% {
+        transform: scale(0.2); /* 缩放比例为0.2 */
+    }
+    10% {
+        transform: scale(1); /* 缩放比例为1 */
+    }
+    50%, 100% {
+        transform: scale(0.2); /* 缩放比例为0.2 */
+    }
+}

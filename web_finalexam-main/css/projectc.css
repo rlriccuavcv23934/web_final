@@ -1,0 +1,222 @@
+@charset "utf-8";
+.mid {
+    height: 180vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mid .main {
+    margin-top: 100px;
+    width: 1024px;
+    height: 2048px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../image/background.jpg");
+    background-size: cover;
+    background-position: -500px;
+    border-radius: 55px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.mid .main h1 {
+    font-size: 50px;
+    font-family: "华文隶书", "SimSun", serif;
+    color: black;
+    margin-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    transition: 0.5s ease 0s;
+}
+
+.mid .main .lang p {
+    font-size: 40px;
+    font-family: "华文新魏", "SimSun", serif;
+    margin-left: 5%;
+    color: black;
+
+}
+
+.mid .main .lang p span {
+    display: inline-block;
+    transition: 0.3s ease 0s;
+}
+
+.mid .main .lang p:hover span {
+    transform: scale(1.3) translateX(5px);
+}
+
+.mid .main a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.mid .main .lang1 p {
+    font-size: 40px;
+    font-family: "华文新魏", "SimSun", serif;
+    margin-left: 180px;
+    margin-top: -82px;
+    color: black;
+    text-shadow: 1px 1px 1px #00d95a;
+}
+
+.mid .main .lang1 p span {
+    display: inline-block;
+    transition: 0.3s ease 0s;
+}
+
+.mid .main .lang1 p:hover span {
+    transform: scale(1.3) translateX(5px);
+}
+
+.mid .main .lang2 p {
+    font-size: 40px;
+    font-family: "华文新魏", "SimSun", serif;
+    margin-left: 355px;
+    margin-top: -82px;
+    color: black;
+
+}
+
+.mid .main .lang2 p span {
+    display: inline-block;
+    transition: 0.3s ease 0s;
+}
+
+.mid .main .lang2 p:hover span {
+    transform: scale(1.3) translateX(5px);
+}
+
+.mid .main .lang3 p {
+    font-size: 40px;
+    font-family: "华文新魏", "SimSun", serif;
+    margin-left: 455px;
+    margin-top: -82px;
+    color: black;
+
+}
+
+.mid .main .lang3 p span {
+    display: inline-block;
+    transition: 0.3s ease 0s;
+}
+
+.mid .main .lang3 p:hover span {
+    transform: scale(1.3) translateX(5px);
+}
+
+.mid .main .main-mid {
+    height: 180px;
+    border-radius: 55px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    background: whitesmoke;
+}
+
+.mid .main .top-side {
+    flex-grow: 1; /* 占据剩余空间 */
+}
+
+
+.mid .main .down-side {
+    flex-grow: 1; /* 占据剩余空间 */
+    display: flex;
+    flex-direction: column;
+    border-radius: 60px;
+    margin-top: 5px;
+    height: 800px;
+    width: 100%;
+    z-index: 9999;
+}
+
+.mid .ab {
+    width: 700px;
+    height: 200px;
+    background: rgba(253, 250, 260, 0.8);
+    box-shadow: 0 0 15px rgb(222, 222, 295);
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 35px;
+    margin-left: 180px;
+    z-index: 9999;
+}
+
+.a1 .img {
+    background-image: url("../image/head.jpg");
+}
+
+.a2 .img {
+    background-image: url("../image/head(2).jpg");
+}
+
+.ab p {
+    word-wrap: break-word;
+    font-family: "Times New Roman", "SimSun", serif;;
+    color: black;
+    line-height: 25px;
+    font-size: 17px;
+    text-shadow: 2px 2px 2px whitesmoke;
+    transition: all 0.3s ease 0s;
+}
+
+.ab p:hover {
+    transform: scale(1.125);
+}
+
+.ab a {
+    text-decoration: none;
+}
+
+.ab .txt {
+    width: 400px;
+    margin: 0 50px 0 50px;
+}
+
+.ab h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    color: #7facc9;
+    font-family: "微软雅黑 Light", "SimSun", serif;;
+    text-shadow: 1px 1px 1px black;
+    transition: all 0.3s ease 0s;
+}
+
+.ab h2:hover {
+    transform: scale(1.125);
+}
+
+.ab .img {
+    width: 300px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+
+.a1 .img:hover {
+    transform: scale(1.1);
+    background-image: url("../image/jabook.png");
+}
+
+.a2 .img:hover {
+    transform: scale(1.1);
+    background-image: url("../image/jastu.png");
+}
+
+.ab .imghid {
+    overflow: hidden;
+}
+
+
+
+
+

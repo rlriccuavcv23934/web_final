@@ -1,0 +1,164 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 将 body 元素的外边距和内边距设置为 0，从而消除默认间距 */
+
+
+/* 样式化导航栏 */
+/* position: fixed; - 指定导航栏相对于视口进行定位 */
+/* display: flex; - 将显示类型设置为 flex，使导航项可以轻松对齐和定位 */
+/* justify-content: space-around; - 在水平轴上均匀分布导航项，间距相等 */
+/* align-items: center; - 在导航栏内垂直居中导航项 */
+/* width: 1540px; - 将导航栏的宽度设置为 1540 像素 */
+/* height: 70px; - 将导航栏的高度设置为 70 像素 */
+/* top: 0px; - 将导航栏的顶部边缘定位于距离视口顶部 0 像素的位置 */
+/* background-color: rgb(123, 161, 197); - 将导航栏的背景颜色设置为 RGB 值 (123, 161, 197) */
+/* overflow: hidden; - 隐藏超出导航栏边界的内容 */
+/* font-size: 20px; - 将导航栏内文本的字体大小设置为 20 像素 */
+/* color: rgb(234, 247, 255); - 将导航栏内文本的颜色设置为 RGB 值 (234, 247, 255) */
+/* opacity: 0.8; - 将导航栏的不透明度设置为 0.8（80% 不透明） */
+/* z-index: 1000; - 指定导航栏的堆叠顺序，确保其显示在页面上的其他元素之上 */
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1540px;
+    height: 70px;
+    top: 0px;
+    background-color: #8299ac;
+    overflow: hidden;
+    font-size: 20px;
+    color: rgb(234, 247, 255);
+    opacity: 100%;
+    z-index: 1000;
+}
+
+.homenav {
+    animation: load2 1s linear;
+}
+
+/*应用了名为 "load2" 的动画效果。动画效果的持续时间为 1 秒，采用线性过渡。*/
+
+nav:hover {
+    opacity: 0.96;
+}
+
+/*当鼠标悬停在导航栏上时，导航栏的不透明度将变为 0.95（95% 不透明）*/
+
+nav .navtitle {
+    padding-left: 50px;
+    width: 30%;
+}
+
+/*选择导航栏内具有 "navtitle" 类的元素，并设置其左侧内边距为 50 像素，宽度占导航栏宽度的 30%。*/
+
+nav .navtitle strong {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+/*选择导航栏内所有具有 "navtitle" 类的元素下的 <strong> 元素，
+并将其字体大小设置为 50 像素，字体加粗程度设置为更加粗体。*/
+
+
+nav a {
+    display: block; /* 将元素显示为块级元素 */
+    justify-content: center; /* 水平居中对齐元素内容 */
+    text-decoration: none; /* 移除文本装饰效果（如下划线） */
+    z-index: 1; /* 设置元素的堆叠顺序为 1 */
+    height: inherit; /* 继承父元素的高度 */
+    line-height: 70px; /* 设置行高为 70px，使元素垂直居中 */
+    width: 120px; /* 设置元素宽度为 120px */
+    text-align: center; /* 水平居中对齐元素内的文本 */
+    font-weight: bolder; /* 设置文本字体的粗细为更加粗体 */
+    color: #deecf5; /* 设置文本颜色为 RGB 值 (84, 109, 158) */
+    transition: 0.4s; /* 设置元素属性变化的过渡效果时间为 0.5 秒 */
+}
+
+
+nav .navanim {
+    position: absolute; /* 将元素的定位方式设置为绝对定位 */
+    height: inherit; /* 继承父元素的高度 */
+    z-index: 0; /* 设置元素的堆叠顺序为 0 */
+    background: #7facc9; /* 设置元素的背景颜色为 RGB 值 (155, 200, 240) */
+    border-radius: 5px; /* 设置元素的边框圆角半径为 5 像素 */
+    left: 0px; /* 将元素的左侧边缘定位于距离其包含元素的左侧边缘 0 像素的位置 */
+    transition: all .5s ease 0s; /* 设置元素属性变化的过渡效果为 0.5 秒的平滑过渡 */
+    width: 120px; /* 设置元素的宽度为 120 像素 */
+}
+
+nav .home, a:nth-child(2):hover ~ .navanim {
+    width: 120px;
+    left: 408px;
+}
+
+/*当满足悬停条件时，
+.navanim 元素的宽度将被设置为 120 像素，
+并且相对于其包含元素（通常是导航栏）的左侧边缘会向右移动 对应 像素的距离。*/
+
+nav .about, a:nth-child(3):hover ~ .navanim {
+    width: 120px;
+    left: 503.5px;
+}
+
+nav .blog, a:nth-child(4):hover ~ .navanim {
+    width: 120px;
+    left: 600.5px;
+}
+
+nav .album, a:nth-child(5):hover ~ .navanim {
+    width: 120px;
+    left: 697px;
+}
+
+nav .join, a:nth-child(6):hover ~ .navanim {
+    width: 120px;
+    left: 795.5px;
+}
+
+nav .project, a:nth-child(7):hover ~ .navanim {
+    width: 120px;
+    left: 893px;
+}
+
+nav .game, a:nth-child(8):hover ~ .navanim {
+    width: 120px;
+    left: 989.5px;
+}
+
+nav .cartoon, a:nth-child(9):hover ~ .navanim {
+    width: 120px;
+    left: 1085.5px;
+}
+
+nav .music, a:nth-child(10):hover ~ .navanim {
+    width: 120px;
+    left: 1182.5px;
+}
+
+/*nav .study,a:nth-child(11):hover~.navanim{
+    width: 120px;
+    left: 1282px;
+}*/
+
+nav .none {
+    width: 20%;
+}
+
+/*.none 类的元素的宽度将被设置为其包含元素宽度的 20%。
+换句话说，它会占据其包含元素宽度的 20%。*/
+
+@keyframes load2 { /*@keyframes load2：这是一个关键帧动画的声明，名称为 load2*/
+    0% { /*0% 和 100%：这些表示动画的起始和结束状态的关键帧百分比。*/
+        top: 0px;
+        opacity: 0; /*使元素完全透明。*/
+    }
+    100% {
+        top: 0px;
+        opacity: 0.8;
+    }
+}
